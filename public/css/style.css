@@ -1,0 +1,43 @@
+body{
+    overflow-x: hidden;
+}
+
+.roomtypes{
+    width: 415px;
+    height: 275px;
+    margin-bottom: 1rem;
+    border-radius: 25px;
+}
+
+.roomtype1{
+    width: 643px;
+    margin-left: 1rem;
+}
+
+.landing1{
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    width: 555px;
+    height: 500px;
+}
+
+#plaintxt{
+    margin-left: 7rem;
+    margin-top: 14rem;
+}
+
+.plaintxt{
+    margin-left: 7rem;
+}
+
+#font{
+    color: #1119ea;
+}
+
+#admin{
+    color: #1119ea;
+}
+
+.table-wrapper {
+    padding: 50px;
+}
