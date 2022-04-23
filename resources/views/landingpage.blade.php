@@ -165,7 +165,7 @@
                                 <div class="row">
                                     <div class="col-6 col-sm-4 mt-2">Nama Pemesan</div>
                                     <div class="col-6 col-sm-8 mt-1">
-                                        <input class="form-control" type="text" placeholder="default input" aria-label="default input example">
+                                        <input class="form-control" type="text" name="nama_pemesan" placeholder="default input" aria-label="default input example">
                                         @error('nama_pemesan')
                                         <div class="invalid-feedback"> 
                                             {{ $message }}
@@ -189,8 +189,8 @@
                                 <div class="row">
                                     <div class="col-6 col-sm-4 mt-3">No. Handphone</div>
                                     <div class="col-6 col-sm-8 mt-2 mb-2">
-                                        <input class="form-control" name="no_Handphone" type="text" placeholder="default input" aria-label="default input example">
-                                        @error('no_Handphone')
+                                        <input class="form-control" name="nomor_hp" type="text" placeholder="default input" aria-label="default input example">
+                                        @error('nomor_hp')
                                         <div class="invalid-feedback"> 
                                             {{ $message }}
                                         </div>

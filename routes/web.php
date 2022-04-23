@@ -4,6 +4,7 @@ use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\KamarController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\ResepsionisController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,9 +34,7 @@ Route::get('/signin', function () {
 
 Route::post('/login', [LoginController::class, 'Authenticate']);
 
-Route::get('/resepsionis', function(){
-    return view('resepsionis');
-});
+// Route::get('/resepsionis', [ResepsionisController::class, 'index'])->name('index.resepsionis');
 
 Route::post('/booking', [BookingController::class, 'store'])->name('store.booking');
 
@@ -50,8 +49,8 @@ Route::patch('/rooms/update/{id}', [KamarController::class, 'update'])->name('up
 Route::delete('/rooms/delete/{id}', [KamarController::class, 'destroy'])->name('delete.rooms');
 
 // // ---> Route Resepsionis
-Route::get('/resepsionis', [BookingController::class, 'index']);
-Route::post('/resepsionis/search', [BookingController::class, 'search'])->name('resepsionis.search');
+Route::get('/resepsionis', [ResepsionisController::class, 'index']);
+Route::post('/resepsionis/search', [ResepsionisController::class, 'search'])->name('resepsionis.search');
 
 
 // // ---> Route Booking

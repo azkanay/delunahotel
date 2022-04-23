@@ -40,7 +40,7 @@
                         </div>
                         <div class="search">
                         <form class="d-flex justify-content-end" style="width: max-content;">
-                            <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+                            <input class="form-control me-3" type="search" name="nama" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Search</button>
                         </form>
                         </div>
@@ -59,24 +59,16 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @forelse($book as $bok)
                     <tr>
-                        <td>Haechan Lee</td>
-                        <td>06-03-2022</td>
-                        <td>11-03-2022</td>
+                        <td>{{$bok->nama_tamu}}</td>
+                        <td>{{$bok->check_in}}</td>
+                        <td>{{$bok->check_out}}</td>
                         <td>Check In</td>
                     </tr>
-                    <tr>
-                        <td>Johnny Suh</td>
-                        <td>06-03-2022</td>
-                        <td>10-03-2022</td>
-                        <td>Check In</td>
-                    </tr>
-                    <tr>
-                        <td>Park Sooyoung</td>
-                        <td>09-03-2022</td>
-                        <td>11-03-2022</td>
-                        <td>Check In</td>
-                    </tr>
+                    @empty
+                        <td colspan="4" style="text-align: center;">Kosong!</td>
+                    @endforelse
                 </tbody>
             </table>
         </div>
